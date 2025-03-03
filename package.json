@@ -1,14 +1,19 @@
 {
   "name": "front-file-manager",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/scripts/index.js",
+  "type": "module",
   "scripts": {
     "test": "npm run prettier:check && npm run lint",
     "lint:fix": "eslint --fix .",
     "lint": "eslint .",
     "prettier:check": "prettier --check **/src/**/*.js",
     "prettier:write": "prettier --write **/src/**/*.js",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start": "webpack  serve --open --mode development --watch",
+    "start:prod": "webpack  serve --open --mode production --watch"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +27,11 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^15.15.0",
+    "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.7",
-    "prettier": "3.5.1"
+    "prettier": "3.5.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }

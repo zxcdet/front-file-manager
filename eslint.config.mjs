@@ -14,7 +14,7 @@ export default [
     rules: {
       'no-debugger': 1,
       // Possible errors
-      'comma-dangle': [2, 'never'],
+      'comma-dangle': 0,
       'no-cond-assign': [2, 'always'],
       'no-constant-condition': 2,
       'no-control-regex': 2,
